@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+
+    <title>Anushka's Portfolio</title>
+
+    <!--
+    - favicon
+  -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/avatar-2.png"
+      type="image/x-icon"
+    />
+
+    <!--
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!--
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!--
+    - #MAIN
+  -->
+
+    <main>
+      <!--
+      - #SIDEBAR
+    -->
+
+      <aside class="sidebar" data-sidebar>
+        <div class="sidebar-info">
+          <figure class="avatar-box">
+            <img src="./assets/images/photo.png" alt="Anushka" width="80" />
+          </figure>
+
+          <div class="info-content">
+            <h1 class="name" title="Anushka">Anushka Khadatkar</h1>
+
+            <p class="title">Web developer</p>
+          </div>
+
+          <button class="info_more-btn" data-sidebar-btn>
+            <span>Show Contacts</span>
+
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
+        </div>
+
+        <div class="sidebar-info_more">
+          <div class="separator"></div>
+
+          <ul class="contacts-list">
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
+
+                <a
+                  href="mailto:anushkakhadatkar12@gmail.com"
+                  class="contact-link"
+                  >anushkakhadatkar12@gmail.com</a
+                >
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Phone</p>
+
+                <a href="tel:+91 9822019209" class="contact-link"
+                  >+91 9822019209</a
+                >
+              </div>
+            </li>
+
+            <!-- <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="calendar-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Birthday</p>
+
+                <time datetime="1982-06-23">June 23, 1982</time>
+              </div>
+            </li> -->
+
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Location</p>
+
+                <address>Maharashtra, India</address>
+              </div>
+            </li>
+            <li class="contact-item1">
+              <button class="button" onclick="openInNewTab()">
+                View my Resume
+              </button>
+              <script>
+                function openInNewTab() {
+                  window.open(
+                    "https://drive.google.com/file/d/1iTpFO1sGnLSDn11BSfLwtdUqbmmtOffc/view?usp=sharing",
+                    "_blank"
+                  );
+                }
+              </script>
+            </li>
+          </ul>
+
+          <div class="separator"></div>
+
+          <ul class="social-list">
+            <li class="social-item">
+              <a
+                href="https://www.linkedin.com/in/anushka-khadatkar/"
+                class="social-link"
+                target="_blank"
+              >
+                <ion-icon name="logo-linkedIn"></ion-icon>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a
+                href="https://github.com/AnushkaKhadatkar"
+                class="social-link"
+                target="_blank"
+              >
+                <ion-icon name="logo-github"></ion-icon>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a
+                href="https://www.instagram.com/anushka.k_12/"
+                class="social-link"
+                target="_blank"
+              >
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- <aside class="sidebar" data-sidebar></aside> -->
+
+      <!--
+      - #main-content
+    -->
+
+      <div class="main-content">
+        <!--
+        - #NAVBAR
+      -->
+
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <button class="navbar-link active" data-nav-link>About</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Resume</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Portfolio</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Contact</button>
+            </li>
+          </ul>
+        </nav>
+
+        <!--
+        - #ABOUT
+      -->
+
+        <article class="about active" data-page="about">
+          <!-- <div class="sidebar-info"> -->
+
+          <header>
+            <h3 class="h2 article-title">
+              Hi There
+              <b class="wave">👋🏻</b>
+            </h3>
+          </header>
+
+          <section class="about-text">
+            <p style="color: white" class="animate">
+              I'm
+              <span
+                id="typing-animation"
+                style="display: inline"
+                style="color: aquamarine"
+              ></span>
+            </p>
+            <script>
+              // Initialize the typing animation
+              const typingAnimationElement =
+                document.getElementById("typing-animation");
+
+              // Create an array of typing text
+              const typingTexts = [
+                " A Data Analyst  ",
+                "A Content Creator ",
+                "A Social Worker ",
+                "An Author",
+              ];
+
+              // Create a function to display the typing animation for a given text
+              function playTypingAnimation(text) {
+                // Loop through each character and add it to the element
+                for (let i = 0; i < text.length; i++) {
+                  setTimeout(() => {
+                    typingAnimationElement.textContent += text[i];
+                  }, i * 200); // Increase the delay to slow down the typing animation
+                }
+
+                // Once the animation is complete, reset the text and start over
+                setTimeout(() => {
+                  typingAnimationElement.textContent = "";
+                  playTypingAnimation(
+                    typingTexts[
+                      (typingTexts.indexOf(text) + 1) % typingTexts.length
+                    ]
+                  );
+                }, text.length * 200);
+              }
+
+              // Start the typing animation loop
+              playTypingAnimation(typingTexts[0]);
+            </script>
+            <p>
+              🖥 I have a strong foundation in data analytics and machine
+              learning, which I honed during my time as a Programmer Analyst at
+              Cognizant Technology Solutions. In my role as
+              <b>Concur Administrator</b>, I managed user data, optimized
+              processes for reimbursement and travel booking, and ensured data
+              accuracy, significantly improving workflow efficiency.
+            </p>
+
+            <p>
+              📚 I hold a degree in
+              <b>Electronics and Communication Engineering</b>, where I
+              undertook various projects related to machine learning and IOT.
+              This experience reinforced my passion for applying data analytics
+              to solve complex, real-world challenges and advance innovative
+              technologies in healthcare.
+            </p>
+
+            <p>
+              🌟 In addition to my technical pursuits, I am deeply committed to
+              <b>community service</b>. As a part of the Rotaract Club, I
+              organized events such as celebrations with orphanages and senior
+              homes,and tree-planting campaigns. My dedication to
+              <b>women’s empowerment</b> led me to volunteer with the Shooting
+              Star Foundation, where I interviewed underprivileged women for
+              STEM scholarships. Additionally, I have contributed to Freedom of
+              employability by mentoring young girls, guiding them in selecting
+              careers that align with their strengths and aspirations.
+            </p>
+          </section>
+
+          <!--
+          - service
+        -->
+
+          <section class="service">
+            <h3 class="h3 service-title">What I do?</h3>
+
+            <ul class="service-list">
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-design.svg
+                "
+                    alt="design icon"
+                    width="40"
+                  />
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Concur Administrator</h4>
+
+                  <p class="service-item-text">
+                    I streamline financial operations across all regions by
+                    optimizing user data management and automating expense and
+                    travel booking processes.
+                  </p>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-dev.svg"
+                    alt="Web development icon"
+                    width="40"
+                  />
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Data Analyst</h4>
+
+                  <p class="service-item-text">
+                    I transforme complex datasets into actionable insights,
+                    driving data-driven decision-making and enhancing business
+                    performance.
+                  </p>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-app.svg"
+                    alt="mobile app icon"
+                    width="40"
+                  />
+                </div>
+                <!-- onclick="window.location.href='//ieeexplore.ieee.org/document/10170234'" -->
+                <div class="service-content-box">
+                  <a
+                    href="https://ieeexplore.ieee.org/document/10170234"
+                    class="publication-link"
+                    target="_blank"
+                  >
+                    <h4 class="h4 service-item-title">Publication</h4>
+                    <p class="service-item-text">
+                      I have published research paper, titled "Early Alzheimer's
+                      Detection Using Random Forest Algorithm," in the IEEE
+                      explore. <i style="color: aqua">(click to know more)</i>
+                    </p>
+                  </a>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-photo.svg"
+                    alt="camera icon"
+                    width="40"
+                  />
+                </div>
+
+                <div class="service-content-box">
+                  <a
+                    href="https://www.amazon.in/dp/9386521814?ref=cm_sw_r_cso_cp_apin_dp_TD98VKRG7WA3GM3WFXFK&ref_=cm_sw_r_cso_cp_apin_dp_TD98VKRG7WA3GM3WFXFK&social_share=cm_sw_r_cso_cp_apin_dp_TD98VKRG7WA3GM3WFXFK&starsLeft=1&skipTwisterOG=1"
+                    class="publication-link"
+                    target="_blank"
+                  >
+                    <h4 class="h4 service-item-title">Writing</h4>
+
+                    <p class="service-item-text">
+                      Published a book titled “I will keep BLOOMING”, consisting
+                      of epigrams, available on Amazon, Kindle, Google Play.
+                      <i style="color: aqua">(click to know more)</i>
+                    </p>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!--
+          - SKILLS
+        -->
+          <section class="service">
+            <h3 class="h3 service-title">MY SKILLS ⚡️</h3>
+
+            <ul class="service-list">
+              <li class="service-item1">
+                <div>
+                  <h4 class="h4 service-item-title">TECHNICAL</h4>
+                  <div class="service-content-box1">
+                    <img
+                      src="./assets/images/python.svg
+                  "
+                      alt="design icon"
+                      width="100"
+                    />
+                    <img
+                      src="./assets/images/mysql.svg
+                  "
+                      alt="design icon"
+                      width="100"
+                    />
+                    <img
+                      src="./assets/images/java.svg
+                  "
+                      alt="design icon"
+                      width="100"
+                    />
+                    <img
+                      src="./assets/images/html.svg
+                  "
+                      alt="design icon"
+                      width="100"
+                    />
+                    <img
+                      src="./assets/images/css.svg
+                  "
+                      alt="design icon"
+                      width="40"
+                    />
+                    <img
+                      src="./assets/images/ml.png
+                  "
+                      alt="design icon"
+                      width="50"
+                    />
+                    <img
+                      src="./assets/images/data.png
+                  "
+                      alt="design icon"
+                      width="50"
+                    />
+                  </div>
+                </div>
+              </li>
+
+              <li class="service-item1">
+                <h4 class="h4 service-item-title">TOOLS</h4>
+                <div class="service-content-box1">
+                  <img
+                    src="./assets/images/bi.png
+                    "
+                    alt="design icon"
+                    width="80"
+                  />
+
+                  <img
+                    src="./assets/images/concur.png
+                  "
+                    alt="design icon"
+                    width="100"
+                  />
+
+                  <img
+                    src="./assets/images/aws.png
+                  "
+                    alt="design icon"
+                    width="80"
+                  />
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <div class="modal-container" data-modal-container>
+            <div class="overlay" data-overlay></div>
+
+            <section class="testimonials-modal">
+              <button class="modal-close-btn" data-modal-close-btn>
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+            </section>
+          </div>
+        </article>
+
+        <!--
+        - #RESUME
+      -->
+
+        <article class="resume" data-page="resume">
+          <header>
+            <h2 class="h2 article-title">Resume</h2>
+          </header>
+
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+
+              <h3 class="h3">Experience</h3>
+            </div>
+
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Cognizant Technology Solutions
+                </h4>
+
+                <div
+                  style="display: flex; justify-content: space-between"
+                  class="rcoem"
+                >
+                  <p>Associate</p>
+                  <span>Sept 2022 — Present</span>
+                </div>
+
+                <p class="timeline-text" style="text-align: justify">
+                  As a Concur System Administrator, I manage and troubleshoot
+                  user data across global regions, enhancing the efficiency of
+                  reimbursement and travel booking processes. Collaborating with
+                  the Workday team, I helped reduce redundancy by 60% through
+                  task automation. I ensure seamless data flow and perform
+                  thorough system testing across Europe, APAC, AEME, LATAM, and
+                  the USA. My role involves regular updates and data checks to
+                  maintain accuracy and consistency, strengthening my expertise
+                  in managing complex data systems and driving operational
+                  improvements.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Cognizant Technology Solutions
+                </h4>
+
+                <div
+                  style="display: flex; justify-content: space-between"
+                  class="rcoem"
+                >
+                  <p>Software Engineer Intern</p>
+                  <span>April 2022 — Sept 2022</span>
+                </div>
+
+                <p class="timeline-text" style="text-align: justify">
+                  I honed my technical skills in Java, database management, and
+                  object-oriented programming, using them to design and
+                  implement dynamic web applications with HTML, CSS, and
+                  JavaScript. Alongside technical development, I actively
+                  participated in group discussions and extempore sessions,
+                  enhancing my communication and interpersonal skills. This
+                  experience provided a strong foundation for my career
+                  development in both technical and soft skills.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">METRO, India</h4>
+
+                <div
+                  style="display: flex; justify-content: space-between"
+                  class="rcoem"
+                >
+                  <p>Intern</p>
+                  <span>Feb 2021 — March 2021</span>
+                </div>
+
+                <p class="timeline-text" style="text-align: justify">
+                  My role included conducting inventory checks and ensuring the
+                  functionality of various electronic systems. Additionally, I
+                  leveraged my knowledge of database management to track and
+                  analyze component data, facilitating efficient inventory
+                  management and reporting. This experience enhanced my skills
+                  in both practical electronics monitoring and data management,
+                  contributing to a comprehensive understanding of inventory
+                  control and data-driven decision-making.
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+
+              <h3 class="h3">Education</h3>
+            </div>
+
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Shri Ramdeobaba College of Engineering and Management,India
+                </h4>
+
+                <span>2018 — 2022</span>
+
+                <div
+                  style="display: flex; justify-content: space-between"
+                  class="rcoem"
+                >
+                  <p>Electronics and Communication Engineering</p>
+                  <p><b>CGPA:</b> 8.43/10</p>
+                </div>
+
+                <p class="timeline-text">
+                  <b>Coursework:</b> OOPS, Data Structure, DBMS, Computer
+                  Network, Microcontrollers
+                </p>
+              </li>
+            </ol>
+          </section>
+        </article>
+
+        <!--
+        - #PORTFOLIO
+      -->
+
+        <article class="portfolio" data-page="portfolio">
+          <header>
+            <h2 class="h2 article-title">Portfolio</h2>
+          </header>
+
+          <section class="projects">
+            <ul class="filter-list">
+              <li class="filter-item">
+                <button class="active" data-filter-btn>All</button>
+              </li>
+
+              <li class="filter-item">
+                <button data-filter-btn>Hands-on</button>
+              </li>
+
+              <li class="filter-item">
+                <button data-filter-btn>Certifications</button>
+              </li>
+
+              <li class="filter-item">
+                <button data-filter-btn>Courses</button>
+              </li>
+            </ul>
+
+            <div class="filter-select-box">
+              <button class="filter-select" data-select>
+                <div class="select-value" data-selecct-value>
+                  Select category
+                </div>
+
+                <div class="select-icon">
+                  <ion-icon name="chevron-down"></ion-icon>
+                </div>
+              </button>
+
+              <ul class="select-list">
+                <li class="select-item">
+                  <button data-select-item>All</button>
+                </li>
+
+                <li class="select-item">
+                  <button data-select-item>Hands-on</button>
+                </li>
+
+                <li class="select-item">
+                  <button data-select-item>Certifications</button>
+                </li>
+
+                <li class="select-item">
+                  <button data-select-item>Courses</button>
+                </li>
+              </ul>
+            </div>
+
+            <ul class="project-list">
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="courses"
+              >
+                <a
+                  href="https://drive.google.com/file/d/1Q2T2QnP12rC2vk_X3NPL0jzel50mxY8g/view?usp=sharing"
+                  target="_blank"
+                >
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/sql.svg"
+                      alt="finance"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">SQL</h3>
+
+                  <p class="project-category">Courses</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="courses"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/java1.png"
+                      alt="orizon"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">JAVA</h3>
+
+                  <p class="project-category">Courses</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="hands-on"
+              >
+                <a
+                  href="https://ieeexplore.ieee.org/document/10170234"
+                  target="_blank"
+                >
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/Machine.webp"
+                      alt="fundo"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">
+                    Early Alzheimer’s Detection Using Random Forest Algorithm
+                  </h3>
+
+                  <p class="project-category">Hands-on</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="certifications"
+              >
+                <a
+                  href="https://www.credly.com/badges/6ea82ee4-4cf2-4640-a357-18f9259bbeed/linked_in_profile"
+                  target="_blank"
+                >
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/aws.jpg"
+                      alt="brawlhalla"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">
+                    AWS Certified Cloud Practitioner
+                  </h3>
+
+                  <p class="project-category">Certifications</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="hands-on"
+              >
+                <a
+                  href="https://drive.google.com/file/d/1XVTGEIVDPkX2yNjJFN1fEIbBhBVSMLJ4/view?usp=sharing"
+                  target="_blank"
+                >
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/lifi.png"
+                      alt="dsm."
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">
+                    Transfer of Data using Li-Fi communication technology
+                  </h3>
+
+                  <p class="project-category">Hands-on</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="hands-on"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/iot.webp"
+                      alt="metaspark"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">
+                    IOT based RFID File Management System.
+                  </h3>
+
+                  <p class="project-category">Hands-on</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="courses"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/data.webp"
+                      alt="summary"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Data Science</h3>
+
+                  <p class="project-category">Courses</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="certifications"
+              >
+                <a
+                  href="https://learn.microsoft.com/api/credentials/share/en-us/Anushkakhadatkar-7589/C6E9A82C313020B3?sharingId=2424BE6F11855DB9"
+                  target="_blank"
+                >
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/power.webp"
+                      alt="task manager"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">
+                    Microsoft Certified: Power BI Data Analyst Associate
+                  </h3>
+
+                  <p class="project-category">Certifications</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="courses"
+              >
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+
+                    <img
+                      src="./assets/images/web.webp"
+                      alt="arrival"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Web Development</h3>
+
+                  <p class="project-category">Courses</p>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </article>
+
+        <!-- #CONTACT -->
+
+        <article class="contact" data-page="contact">
+          <header>
+            <h2 class="h2 article-title">Contact</h2>
+          </header>
+
+          <section></section>
+
+          <section class="contact-form">
+            <!-- <h3 class="h3 form-title">Contact Form</h3> -->
+            <p class="rcoem" style="margin-bottom: 30px; width: 90%">
+              Feel free to drop a message, whether it's just to say Hi or to
+              chat about projects related to data analytics. I'd love to hear
+              from you and explore how we can collaborate or learn from each
+              other.
+            </p>
+            <p class="rcoem" style="margin-bottom: 50px">
+              <i>Let's turn data into insights together!</i>
+            </p>
+            <form
+              action="https://api.web3forms.com/submit"
+              method="POST"
+              class="form"
+            >
+              <div class="input-wrapper">
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value="c0fd5440-3cff-474e-b008-53e9f6c91ef4"
+                />
+                <input
+                  type="text"
+                  name="fullname"
+                  class="form-input"
+                  placeholder="Full name"
+                  required
+                  data-form-input
+                />
+
+                <input
+                  type="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="Email address"
+                  required
+                  data-form-input
+                />
+              </div>
+
+              <textarea
+                name="message"
+                class="form-input"
+                placeholder="Your Message"
+                required
+                data-form-input
+              ></textarea>
+
+              <button class="form-btn" type="submit">
+                <ion-icon name="paper-plane"></ion-icon>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <!--
+    - custom js link
+  -->
+    <script src="./assets/js/script.js"></script>
+
+    <!--
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <footer>
+      <p>&copy; @2024 Anushka Khadatkar. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
