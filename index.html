@@ -1,1017 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anushka Khadatkar · AI Engineer</title>
+  <meta name="description" content="Anushka Khadatkar — AI Engineer building LLM applications, RAG systems and LangGraph agents on reliable data infrastructure." />
+  <meta name="theme-color" content="#070a12" />
+  <meta property="og:title" content="Anushka Khadatkar · AI Engineer" />
+  <meta property="og:description" content="LLM apps, RAG, LangGraph agents — shipped to production." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070a12'/%3E%3Ctext x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-size='34' font-weight='700' fill='%2300f0ff'%3EAK%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body>
+  <canvas id="neural-bg" aria-hidden="true"></canvas>
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900"
-      rel="stylesheet"
-    />
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__logo" aria-label="Home">
+      <span class="nav__prompt">~/</span>anushka<span class="nav__cursor">_</span>
+    </a>
+    <nav class="nav__links" id="nav-links">
+      <a href="#about">about</a>
+      <a href="#experience">experience</a>
+      <a href="#projects">projects</a>
+      <a href="#skills">skills</a>
+      <a href="#education">education</a>
+      <a href="#contact" class="nav__cta">contact</a>
+    </nav>
+    <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
 
-    <title>Anushka's Portfolio</title>
-
-    <!--
-    - favicon
-  -->
-    <link
-      rel="shortcut icon"
-      href="./assets/images/avatar-2.png"
-      type="image/x-icon"
-    />
-
-    <!--
-    - custom css link
-  -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
-
-    <!--
-    - google font link
-  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-
-  <body>
-    <!--
-    - #MAIN
-  -->
-
-    <main>
-      <!--
-      - #SIDEBAR
-    -->
-
-      <aside class="sidebar" data-sidebar>
-        <div class="sidebar-info">
-          <figure class="avatar-box">
-            <img src="./assets/images/photo.png" alt="Anushka" width="80" />
-          </figure>
-
-          <div class="info-content">
-            <h1 class="name" title="Anushka">Anushka Khadatkar</h1>
-
-            <p class="title">Web developer</p>
+  <main id="top">
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="hero__inner">
+        <div class="hero__text">
+          <p class="hero__eyebrow reveal"><span class="dot dot--green"></span> available for full-time AI/ML roles · 2027</p>
+          <h1 class="hero__title reveal">
+            <span class="hero__hi">Hi, I'm</span>
+            <span class="hero__name glitch" data-text="Anushka Khadatkar">Anushka Khadatkar</span>
+          </h1>
+          <p class="hero__role reveal">
+            <span class="hero__role-static">AI Engineer</span>
+            <span class="hero__role-sep">//</span>
+            <span class="typed" id="typed" aria-live="polite"></span><span class="typed-caret">|</span>
+          </p>
+          <p class="hero__pitch reveal">
+            I ship LLM applications on top of reliable data infrastructure —
+            RAG search, LangGraph agents and ML services that
+            <em>30+ engineers and executives use every day</em>.
+          </p>
+          <div class="hero__actions reveal">
+            <a href="#projects" class="btn btn--primary">View projects <span class="btn__arrow">→</span></a>
+            <a href="mailto:anushkak1202@gmail.com" class="btn btn--ghost">Get in touch</a>
           </div>
-
-          <button class="info_more-btn" data-sidebar-btn>
-            <span>Show Contacts</span>
-
-            <ion-icon name="chevron-down"></ion-icon>
-          </button>
+          <div class="hero__socials reveal">
+            <a href="https://github.com/AnushkaKhadatkar" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2.17c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/anushka-khadatkar" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+            </a>
+            <a href="mailto:anushkak1202@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            </a>
+          </div>
         </div>
 
-        <div class="sidebar-info_more">
-          <div class="separator"></div>
-
-          <ul class="contacts-list">
-            <li class="contact-item">
-              <div class="icon-box">
-                <ion-icon name="mail-outline"></ion-icon>
-              </div>
-
-              <div class="contact-info">
-                <p class="contact-title">Email</p>
-
-                <a
-                  href="mailto:anushkakhadatkar12@gmail.com"
-                  class="contact-link"
-                  >anushkakhadatkar12@gmail.com</a
-                >
-              </div>
-            </li>
-
-            <li class="contact-item">
-              <div class="icon-box">
-                <ion-icon name="phone-portrait-outline"></ion-icon>
-              </div>
-
-              <div class="contact-info">
-                <p class="contact-title">Phone</p>
-
-                <a href="tel:+91 9822019209" class="contact-link"
-                  >+91 9822019209</a
-                >
-              </div>
-            </li>
-
-            <!-- <li class="contact-item">
-              <div class="icon-box">
-                <ion-icon name="calendar-outline"></ion-icon>
-              </div>
-
-              <div class="contact-info">
-                <p class="contact-title">Birthday</p>
-
-                <time datetime="1982-06-23">June 23, 1982</time>
-              </div>
-            </li> -->
-
-            <li class="contact-item">
-              <div class="icon-box">
-                <ion-icon name="location-outline"></ion-icon>
-              </div>
-
-              <div class="contact-info">
-                <p class="contact-title">Location</p>
-
-                <address>Maharashtra, India</address>
-              </div>
-            </li>
-            <li class="contact-item1">
-              <button class="button" onclick="openInNewTab()">
-                View my Resume
-              </button>
-              <script>
-                function openInNewTab() {
-                  window.open(
-                    "https://drive.google.com/file/d/1iTpFO1sGnLSDn11BSfLwtdUqbmmtOffc/view?usp=sharing",
-                    "_blank"
-                  );
-                }
-              </script>
-            </li>
-          </ul>
-
-          <div class="separator"></div>
-
-          <ul class="social-list">
-            <li class="social-item">
-              <a
-                href="https://www.linkedin.com/in/anushka-khadatkar/"
-                class="social-link"
-                target="_blank"
-              >
-                <ion-icon name="logo-linkedIn"></ion-icon>
-              </a>
-            </li>
-
-            <li class="social-item">
-              <a
-                href="https://github.com/AnushkaKhadatkar"
-                class="social-link"
-                target="_blank"
-              >
-                <ion-icon name="logo-github"></ion-icon>
-              </a>
-            </li>
-
-            <li class="social-item">
-              <a
-                href="https://www.instagram.com/anushka.k_12/"
-                class="social-link"
-                target="_blank"
-              >
-                <ion-icon name="logo-instagram"></ion-icon>
-              </a>
-            </li>
-          </ul>
+        <!-- Terminal card -->
+        <div class="terminal reveal" id="terminal">
+          <div class="terminal__bar">
+            <span class="terminal__dot terminal__dot--r"></span>
+            <span class="terminal__dot terminal__dot--y"></span>
+            <span class="terminal__dot terminal__dot--g"></span>
+            <span class="terminal__title">anushka@ai-platform:~</span>
+          </div>
+          <pre class="terminal__body" id="terminal-body"></pre>
         </div>
-      </aside>
+      </div>
 
-      <!-- <aside class="sidebar" data-sidebar></aside> -->
+      <a href="#about" class="hero__scroll" aria-label="Scroll down">
+        <span></span>
+      </a>
+    </section>
 
-      <!--
-      - #main-content
-    -->
+    <!-- ===== ABOUT / BENTO ===== -->
+    <section class="section" id="about">
+      <h2 class="section__title reveal"><span class="section__num">01</span> about<span class="section__cursor">_</span></h2>
 
-      <div class="main-content">
-        <!--
-        - #NAVBAR
-      -->
-
-        <nav class="navbar">
-          <ul class="navbar-list">
-            <li class="navbar-item">
-              <button class="navbar-link active" data-nav-link>About</button>
-            </li>
-
-            <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Resume</button>
-            </li>
-
-            <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Portfolio</button>
-            </li>
-
-            <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Contact</button>
-            </li>
-          </ul>
-        </nav>
-
-        <!--
-        - #ABOUT
-      -->
-
-        <article class="about active" data-page="about">
-          <!-- <div class="sidebar-info"> -->
-
-          <header>
-            <h3 class="h2 article-title">
-              Hi There
-              <b class="wave">👋🏻</b>
-            </h3>
-          </header>
-
-          <section class="about-text">
-            <p style="color: white" class="animate">
-              I'm
-              <span
-                id="typing-animation"
-                style="display: inline"
-                style="color: aquamarine"
-              ></span>
-            </p>
-            <script>
-              // Initialize the typing animation
-              const typingAnimationElement =
-                document.getElementById("typing-animation");
-
-              // Create an array of typing text
-              const typingTexts = [
-                " A Data Analyst  ",
-                "A Content Creator ",
-                "A Social Worker ",
-                "An Author",
-              ];
-
-              // Create a function to display the typing animation for a given text
-              function playTypingAnimation(text) {
-                // Loop through each character and add it to the element
-                for (let i = 0; i < text.length; i++) {
-                  setTimeout(() => {
-                    typingAnimationElement.textContent += text[i];
-                  }, i * 200); // Increase the delay to slow down the typing animation
-                }
-
-                // Once the animation is complete, reset the text and start over
-                setTimeout(() => {
-                  typingAnimationElement.textContent = "";
-                  playTypingAnimation(
-                    typingTexts[
-                      (typingTexts.indexOf(text) + 1) % typingTexts.length
-                    ]
-                  );
-                }, text.length * 200);
-              }
-
-              // Start the typing animation loop
-              playTypingAnimation(typingTexts[0]);
-            </script>
+      <div class="bento">
+        <article class="bento__card bento__card--wide reveal glow-cyan">
+          <div class="bento__avatar">
+            <img src="./assets/images/photo.png" alt="Anushka Khadatkar" width="96" height="96" />
+            <span class="bento__ring"></span>
+          </div>
+          <div>
+            <h3>AI Engineer who ships.</h3>
             <p>
-              🖥 I have a strong foundation in data analytics and machine
-              learning, which I honed during my time as a Programmer Analyst at
-              Cognizant Technology Solutions. In my role as
-              <b>Concur Administrator</b>, I managed user data, optimized
-              processes for reimbursement and travel booking, and ensured data
-              accuracy, significantly improving workflow efficiency.
+              I'm an AI Platform Engineer at <strong>Zenith Engineers</strong> and an MS Data Science
+              student at <strong>San José State University</strong> (May 2027). I've deployed
+              <strong>6 production AI systems</strong> — RAG search over 8,000+ documents, a LangGraph
+              email-to-proposal pipeline, an interpretable fee estimator and a vision drawing analyzer —
+              all used daily by 30+ engineers and executives.
             </p>
-
             <p>
-              📚 I hold a degree in
-              <b>Electronics and Communication Engineering</b>, where I
-              undertook various projects related to machine learning and IOT.
-              This experience reinforced my passion for applying data analytics
-              to solve complex, real-world challenges and advance innovative
-              technologies in healthcare.
+              Before that I spent ~3 years as a <strong>Data Engineer at Cognizant</strong>, building
+              Kafka + PySpark pipelines that moved 5M+ financial records a month into Snowflake. That's
+              the foundation: I build LLM apps that are fast, grounded and tested, not demos.
             </p>
-
-            <p>
-              🌟 In addition to my technical pursuits, I am deeply committed to
-              <b>community service</b>. As a part of the Rotaract Club, I
-              organized events such as celebrations with orphanages and senior
-              homes,and tree-planting campaigns. My dedication to
-              <b>women’s empowerment</b> led me to volunteer with the Shooting
-              Star Foundation, where I interviewed underprivileged women for
-              STEM scholarships. Additionally, I have contributed to Freedom of
-              employability by mentoring young girls, guiding them in selecting
-              careers that align with their strengths and aspirations.
-            </p>
-          </section>
-
-          <!--
-          - service
-        -->
-
-          <section class="service">
-            <h3 class="h3 service-title">What I do?</h3>
-
-            <ul class="service-list">
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img
-                    src="./assets/images/icon-design.svg
-                "
-                    alt="design icon"
-                    width="40"
-                  />
-                </div>
-
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Concur Administrator</h4>
-
-                  <p class="service-item-text">
-                    I streamline financial operations across all regions by
-                    optimizing user data management and automating expense and
-                    travel booking processes.
-                  </p>
-                </div>
-              </li>
-
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img
-                    src="./assets/images/icon-dev.svg"
-                    alt="Web development icon"
-                    width="40"
-                  />
-                </div>
-
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Data Analyst</h4>
-
-                  <p class="service-item-text">
-                    I transforme complex datasets into actionable insights,
-                    driving data-driven decision-making and enhancing business
-                    performance.
-                  </p>
-                </div>
-              </li>
-
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img
-                    src="./assets/images/icon-app.svg"
-                    alt="mobile app icon"
-                    width="40"
-                  />
-                </div>
-                <!-- onclick="window.location.href='//ieeexplore.ieee.org/document/10170234'" -->
-                <div class="service-content-box">
-                  <a
-                    href="https://ieeexplore.ieee.org/document/10170234"
-                    class="publication-link"
-                    target="_blank"
-                  >
-                    <h4 class="h4 service-item-title">Publication</h4>
-                    <p class="service-item-text">
-                      I have published research paper, titled "Early Alzheimer's
-                      Detection Using Random Forest Algorithm," in the IEEE
-                      explore. <i style="color: aqua">(click to know more)</i>
-                    </p>
-                  </a>
-                </div>
-              </li>
-
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img
-                    src="./assets/images/icon-photo.svg"
-                    alt="camera icon"
-                    width="40"
-                  />
-                </div>
-
-                <div class="service-content-box">
-                  <a
-                    href="https://www.amazon.in/dp/9386521814?ref=cm_sw_r_cso_cp_apin_dp_TD98VKRG7WA3GM3WFXFK&ref_=cm_sw_r_cso_cp_apin_dp_TD98VKRG7WA3GM3WFXFK&social_share=cm_sw_r_cso_cp_apin_dp_TD98VKRG7WA3GM3WFXFK&starsLeft=1&skipTwisterOG=1"
-                    class="publication-link"
-                    target="_blank"
-                  >
-                    <h4 class="h4 service-item-title">Writing</h4>
-
-                    <p class="service-item-text">
-                      Published a book titled “I will keep BLOOMING”, consisting
-                      of epigrams, available on Amazon, Kindle, Google Play.
-                      <i style="color: aqua">(click to know more)</i>
-                    </p>
-                  </a>
-                </div>
-              </li>
-            </ul>
-          </section>
-
-          <!--
-          - SKILLS
-        -->
-          <section class="service">
-            <h3 class="h3 service-title">MY SKILLS ⚡️</h3>
-
-            <ul class="service-list">
-              <li class="service-item1">
-                <div>
-                  <h4 class="h4 service-item-title">TECHNICAL</h4>
-                  <div class="service-content-box1">
-                    <img
-                      src="./assets/images/python.svg
-                  "
-                      alt="design icon"
-                      width="100"
-                    />
-                    <img
-                      src="./assets/images/mysql.svg
-                  "
-                      alt="design icon"
-                      width="100"
-                    />
-                    <img
-                      src="./assets/images/java.svg
-                  "
-                      alt="design icon"
-                      width="100"
-                    />
-                    <img
-                      src="./assets/images/html.svg
-                  "
-                      alt="design icon"
-                      width="100"
-                    />
-                    <img
-                      src="./assets/images/css.svg
-                  "
-                      alt="design icon"
-                      width="40"
-                    />
-                    <img
-                      src="./assets/images/ml.png
-                  "
-                      alt="design icon"
-                      width="50"
-                    />
-                    <img
-                      src="./assets/images/data.png
-                  "
-                      alt="design icon"
-                      width="50"
-                    />
-                  </div>
-                </div>
-              </li>
-
-              <li class="service-item1">
-                <h4 class="h4 service-item-title">TOOLS</h4>
-                <div class="service-content-box1">
-                  <img
-                    src="./assets/images/bi.png
-                    "
-                    alt="design icon"
-                    width="80"
-                  />
-
-                  <img
-                    src="./assets/images/concur.png
-                  "
-                    alt="design icon"
-                    width="100"
-                  />
-
-                  <img
-                    src="./assets/images/aws.png
-                  "
-                    alt="design icon"
-                    width="80"
-                  />
-                </div>
-              </li>
-            </ul>
-          </section>
-
-          <div class="modal-container" data-modal-container>
-            <div class="overlay" data-overlay></div>
-
-            <section class="testimonials-modal">
-              <button class="modal-close-btn" data-modal-close-btn>
-                <ion-icon name="close-outline"></ion-icon>
-              </button>
-            </section>
           </div>
         </article>
 
-        <!--
-        - #RESUME
-      -->
-
-        <article class="resume" data-page="resume">
-          <header>
-            <h2 class="h2 article-title">Resume</h2>
-          </header>
-
-          <section class="timeline">
-            <div class="title-wrapper">
-              <div class="icon-box">
-                <ion-icon name="book-outline"></ion-icon>
-              </div>
-
-              <h3 class="h3">Experience</h3>
-            </div>
-
-            <ol class="timeline-list">
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  Cognizant Technology Solutions
-                </h4>
-
-                <div
-                  style="display: flex; justify-content: space-between"
-                  class="rcoem"
-                >
-                  <p>Associate</p>
-                  <span>Sept 2022 — Present</span>
-                </div>
-
-                <p class="timeline-text" style="text-align: justify">
-                  As a Concur System Administrator, I manage and troubleshoot
-                  user data across global regions, enhancing the efficiency of
-                  reimbursement and travel booking processes. Collaborating with
-                  the Workday team, I helped reduce redundancy by 60% through
-                  task automation. I ensure seamless data flow and perform
-                  thorough system testing across Europe, APAC, AEME, LATAM, and
-                  the USA. My role involves regular updates and data checks to
-                  maintain accuracy and consistency, strengthening my expertise
-                  in managing complex data systems and driving operational
-                  improvements.
-                </p>
-              </li>
-
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  Cognizant Technology Solutions
-                </h4>
-
-                <div
-                  style="display: flex; justify-content: space-between"
-                  class="rcoem"
-                >
-                  <p>Software Engineer Intern</p>
-                  <span>April 2022 — Sept 2022</span>
-                </div>
-
-                <p class="timeline-text" style="text-align: justify">
-                  I honed my technical skills in Java, database management, and
-                  object-oriented programming, using them to design and
-                  implement dynamic web applications with HTML, CSS, and
-                  JavaScript. Alongside technical development, I actively
-                  participated in group discussions and extempore sessions,
-                  enhancing my communication and interpersonal skills. This
-                  experience provided a strong foundation for my career
-                  development in both technical and soft skills.
-                </p>
-              </li>
-
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">METRO, India</h4>
-
-                <div
-                  style="display: flex; justify-content: space-between"
-                  class="rcoem"
-                >
-                  <p>Intern</p>
-                  <span>Feb 2021 — March 2021</span>
-                </div>
-
-                <p class="timeline-text" style="text-align: justify">
-                  My role included conducting inventory checks and ensuring the
-                  functionality of various electronic systems. Additionally, I
-                  leveraged my knowledge of database management to track and
-                  analyze component data, facilitating efficient inventory
-                  management and reporting. This experience enhanced my skills
-                  in both practical electronics monitoring and data management,
-                  contributing to a comprehensive understanding of inventory
-                  control and data-driven decision-making.
-                </p>
-              </li>
-            </ol>
-          </section>
-
-          <section class="timeline">
-            <div class="title-wrapper">
-              <div class="icon-box">
-                <ion-icon name="book-outline"></ion-icon>
-              </div>
-
-              <h3 class="h3">Education</h3>
-            </div>
-
-            <ol class="timeline-list">
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  Shri Ramdeobaba College of Engineering and Management,India
-                </h4>
-
-                <span>2018 — 2022</span>
-
-                <div
-                  style="display: flex; justify-content: space-between"
-                  class="rcoem"
-                >
-                  <p>Electronics and Communication Engineering</p>
-                  <p><b>CGPA:</b> 8.43/10</p>
-                </div>
-
-                <p class="timeline-text">
-                  <b>Coursework:</b> OOPS, Data Structure, DBMS, Computer
-                  Network, Microcontrollers
-                </p>
-              </li>
-            </ol>
-          </section>
+        <article class="bento__card bento__card--stat reveal glow-magenta">
+          <span class="stat__value" data-count="6">0</span>
+          <span class="stat__label">production AI systems shipped</span>
         </article>
 
-        <!--
-        - #PORTFOLIO
-      -->
-
-        <article class="portfolio" data-page="portfolio">
-          <header>
-            <h2 class="h2 article-title">Portfolio</h2>
-          </header>
-
-          <section class="projects">
-            <ul class="filter-list">
-              <li class="filter-item">
-                <button class="active" data-filter-btn>All</button>
-              </li>
-
-              <li class="filter-item">
-                <button data-filter-btn>Hands-on</button>
-              </li>
-
-              <li class="filter-item">
-                <button data-filter-btn>Certifications</button>
-              </li>
-
-              <li class="filter-item">
-                <button data-filter-btn>Courses</button>
-              </li>
-            </ul>
-
-            <div class="filter-select-box">
-              <button class="filter-select" data-select>
-                <div class="select-value" data-selecct-value>
-                  Select category
-                </div>
-
-                <div class="select-icon">
-                  <ion-icon name="chevron-down"></ion-icon>
-                </div>
-              </button>
-
-              <ul class="select-list">
-                <li class="select-item">
-                  <button data-select-item>All</button>
-                </li>
-
-                <li class="select-item">
-                  <button data-select-item>Hands-on</button>
-                </li>
-
-                <li class="select-item">
-                  <button data-select-item>Certifications</button>
-                </li>
-
-                <li class="select-item">
-                  <button data-select-item>Courses</button>
-                </li>
-              </ul>
-            </div>
-
-            <ul class="project-list">
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="courses"
-              >
-                <a
-                  href="https://drive.google.com/file/d/1Q2T2QnP12rC2vk_X3NPL0jzel50mxY8g/view?usp=sharing"
-                  target="_blank"
-                >
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/sql.svg"
-                      alt="finance"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">SQL</h3>
-
-                  <p class="project-category">Courses</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="courses"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/java1.png"
-                      alt="orizon"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">JAVA</h3>
-
-                  <p class="project-category">Courses</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="hands-on"
-              >
-                <a
-                  href="https://ieeexplore.ieee.org/document/10170234"
-                  target="_blank"
-                >
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/Machine.webp"
-                      alt="fundo"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">
-                    Early Alzheimer’s Detection Using Random Forest Algorithm
-                  </h3>
-
-                  <p class="project-category">Hands-on</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="certifications"
-              >
-                <a
-                  href="https://www.credly.com/badges/6ea82ee4-4cf2-4640-a357-18f9259bbeed/linked_in_profile"
-                  target="_blank"
-                >
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/aws.jpg"
-                      alt="brawlhalla"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">
-                    AWS Certified Cloud Practitioner
-                  </h3>
-
-                  <p class="project-category">Certifications</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="hands-on"
-              >
-                <a
-                  href="https://drive.google.com/file/d/1XVTGEIVDPkX2yNjJFN1fEIbBhBVSMLJ4/view?usp=sharing"
-                  target="_blank"
-                >
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/lifi.png"
-                      alt="dsm."
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">
-                    Transfer of Data using Li-Fi communication technology
-                  </h3>
-
-                  <p class="project-category">Hands-on</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="hands-on"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/iot.webp"
-                      alt="metaspark"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">
-                    IOT based RFID File Management System.
-                  </h3>
-
-                  <p class="project-category">Hands-on</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="courses"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/data.webp"
-                      alt="summary"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Data Science</h3>
-
-                  <p class="project-category">Courses</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="certifications"
-              >
-                <a
-                  href="https://learn.microsoft.com/api/credentials/share/en-us/Anushkakhadatkar-7589/C6E9A82C313020B3?sharingId=2424BE6F11855DB9"
-                  target="_blank"
-                >
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/power.webp"
-                      alt="task manager"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">
-                    Microsoft Certified: Power BI Data Analyst Associate
-                  </h3>
-
-                  <p class="project-category">Certifications</p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="courses"
-              >
-                <a href="#">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-
-                    <img
-                      src="./assets/images/web.webp"
-                      alt="arrival"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <h3 class="project-title">Web Development</h3>
-
-                  <p class="project-category">Courses</p>
-                </a>
-              </li>
-            </ul>
-          </section>
+        <article class="bento__card bento__card--stat reveal glow-green">
+          <span class="stat__value"><span data-count="416">0</span></span>
+          <span class="stat__label">automated tests across a 6-package Python monorepo</span>
         </article>
 
-        <!-- #CONTACT -->
+        <article class="bento__card bento__card--stat reveal glow-cyan">
+          <span class="stat__value stat__value--sm">4h <span class="stat__arrow">→</span> 10min</span>
+          <span class="stat__label">proposal turnaround with a LangGraph pipeline</span>
+        </article>
 
-        <article class="contact" data-page="contact">
-          <header>
-            <h2 class="h2 article-title">Contact</h2>
-          </header>
+        <article class="bento__card bento__card--stat reveal glow-magenta">
+          <span class="stat__value stat__value--sm">45s <span class="stat__arrow">→</span> 3s</span>
+          <span class="stat__label">RAG query latency after redesigning vector search</span>
+        </article>
 
-          <section></section>
+        <article class="bento__card bento__card--stack reveal glow-green">
+          <h4>// currently</h4>
+          <ul class="now">
+            <li><span class="dot dot--green"></span> Building agentic pipelines with LangGraph + MCP</li>
+            <li><span class="dot dot--cyan"></span> MS Data Science @ SJSU · Deep Learning, GenAI, Distributed Systems</li>
+            <li><span class="dot dot--magenta"></span> Open to AI Engineer / ML Engineer roles</li>
+          </ul>
+        </article>
 
-          <section class="contact-form">
-            <!-- <h3 class="h3 form-title">Contact Form</h3> -->
-            <p class="rcoem" style="margin-bottom: 30px; width: 90%">
-              Feel free to drop a message, whether it's just to say Hi or to
-              chat about projects related to data analytics. I'd love to hear
-              from you and explore how we can collaborate or learn from each
-              other.
-            </p>
-            <p class="rcoem" style="margin-bottom: 50px">
-              <i>Let's turn data into insights together!</i>
-            </p>
-            <form
-              action="https://api.web3forms.com/submit"
-              method="POST"
-              class="form"
-            >
-              <div class="input-wrapper">
-                <input
-                  type="hidden"
-                  name="access_key"
-                  value="c0fd5440-3cff-474e-b008-53e9f6c91ef4"
-                />
-                <input
-                  type="text"
-                  name="fullname"
-                  class="form-input"
-                  placeholder="Full name"
-                  required
-                  data-form-input
-                />
-
-                <input
-                  type="email"
-                  name="email"
-                  class="form-input"
-                  placeholder="Email address"
-                  required
-                  data-form-input
-                />
-              </div>
-
-              <textarea
-                name="message"
-                class="form-input"
-                placeholder="Your Message"
-                required
-                data-form-input
-              ></textarea>
-
-              <button class="form-btn" type="submit">
-                <ion-icon name="paper-plane"></ion-icon>
-                <span>Send Message</span>
-              </button>
-            </form>
-          </section>
+        <article class="bento__card bento__card--pub reveal glow-cyan">
+          <h4>// publication</h4>
+          <a href="https://ieeexplore.ieee.org/document/10170234" target="_blank" rel="noopener" class="pub">
+            <span class="pub__title">Early Alzheimer's Detection Using Random Forest Algorithm</span>
+            <span class="pub__venue">IEEE IConSCEPT 2023 ↗</span>
+          </a>
         </article>
       </div>
-    </main>
+    </section>
 
-    <!--
-    - custom js link
-  -->
-    <script src="./assets/js/script.js"></script>
+    <!-- ===== EXPERIENCE ===== -->
+    <section class="section" id="experience">
+      <h2 class="section__title reveal"><span class="section__num">02</span> experience<span class="section__cursor">_</span></h2>
 
-    <!--
-    - ionicon link
-  -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-    <footer>
-      <p>&copy; @2024 Anushka Khadatkar. All rights reserved.</p>
-    </footer>
-  </body>
+      <div class="timeline">
+        <article class="tl reveal">
+          <div class="tl__marker"><span></span></div>
+          <div class="tl__card glow-cyan">
+            <header class="tl__head">
+              <div>
+                <h3>AI Platform Engineer Co-op</h3>
+                <p class="tl__org">Zenith Engineers · USA</p>
+              </div>
+              <span class="tl__date">Aug 2026 — Present</span>
+            </header>
+            <ul class="tl__list">
+              <li>Engineered a <strong>LangGraph email-to-proposal pipeline</strong> with deterministic DOCX templates, keeping legally binding text out of LLM generation and cutting turnaround from <mark>4 hours to 10 minutes</mark>.</li>
+              <li>Designed an interpretable <strong>fee estimation engine</strong> (log-linear / quantile regression, KNN) and a <strong>vision drawing analyzer</strong>, saving ~2 hours of review per project.</li>
+              <li>Architected <strong>6 production AI systems</strong> used daily by 30+ staff; consolidated platform code into a 6-package Python monorepo with <mark>416 automated tests</mark>.</li>
+            </ul>
+            <div class="tags">
+              <span>LangGraph</span><span>Python</span><span>FastAPI</span><span>Vision LLMs</span><span>scikit-learn</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="tl reveal">
+          <div class="tl__marker"><span></span></div>
+          <div class="tl__card glow-magenta">
+            <header class="tl__head">
+              <div>
+                <h3>AI Platform Engineer Intern</h3>
+                <p class="tl__org">Zenith Engineers · USA</p>
+              </div>
+              <span class="tl__date">Jun 2026 — Aug 2026</span>
+            </header>
+            <ul class="tl__list">
+              <li>Architected a <strong>Transformer RAG engine over 8,000+ documents</strong> with parent-child chunking, dense embeddings and LLM query routing; redesigned vector search with metadata filtering to cut latency from <mark>40–50s to 3–4s</mark> with page-level citations.</li>
+              <li>Resolved lock contention on a 2.9M-row table via a concurrent foreign-key index migration, cutting re-ingestion from ~100s to 1–2s.</li>
+              <li>Built API connectors (Google Drive, Sheets, Zoho CRM) with cursor pagination — a zero-failure re-index of 9,454 deals and 5,886 contacts.</li>
+              <li>Shipped the web app on AWS with FastAPI, React, PostgreSQL and Pinecone.</li>
+            </ul>
+            <div class="tags">
+              <span>RAG</span><span>Pinecone</span><span>PostgreSQL</span><span>React</span><span>AWS</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="tl reveal">
+          <div class="tl__marker"><span></span></div>
+          <div class="tl__card glow-green">
+            <header class="tl__head">
+              <div>
+                <h3>Data Engineer</h3>
+                <p class="tl__org">Cognizant · India</p>
+              </div>
+              <span class="tl__date">Sep 2022 — Jul 2025</span>
+            </header>
+            <ul class="tl__list">
+              <li>Engineered <strong>Kafka streaming + PySpark ETL</strong> on AWS ingesting ~5M+ SAP Concur financial records monthly into Snowflake, with incremental loads and dynamic schema evolution.</li>
+              <li>Tuned Spark partitioning, broadcast joins and SQL execution plans, cutting pipeline runtime by <mark>40%</mark>.</li>
+              <li>Automated data-quality and schema-compliance checks with Python + Airflow, reducing production job failures by 30%.</li>
+            </ul>
+            <div class="tags">
+              <span>Kafka</span><span>PySpark</span><span>Snowflake</span><span>Airflow</span><span>AWS EMR</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="section" id="projects">
+      <h2 class="section__title reveal"><span class="section__num">03</span> projects<span class="section__cursor">_</span></h2>
+
+      <div class="projects">
+        <article class="proj reveal tilt" data-accent="cyan">
+          <div class="proj__glow"></div>
+          <header class="proj__head">
+            <span class="proj__icon">⚡</span>
+            <span class="proj__kind">streaming · LLM serving</span>
+          </header>
+          <h3>Real-Time GenAI Risk Decisioning Platform</h3>
+          <p>
+            Kafka + Flink streaming pipeline feeding Redis vector stores for real-time LLM context assembly.
+            Fine-tuned Transformer LLMs served via FastAPI and KServe at <strong>&lt;50 ms</strong> risk-scoring latency,
+            with Prometheus + Grafana dashboards for LLM drift and latency monitoring.
+          </p>
+          <div class="tags">
+            <span>Kafka</span><span>Flink</span><span>PyTorch</span><span>KServe</span><span>Redis</span><span>Grafana</span>
+          </div>
+        </article>
+
+        <article class="proj reveal tilt" data-accent="magenta">
+          <div class="proj__glow"></div>
+          <header class="proj__head">
+            <span class="proj__icon">◈</span>
+            <span class="proj__kind">lakehouse · agents</span>
+          </header>
+          <h3>Revenue Leakage &amp; Root-Cause Intelligence Platform</h3>
+          <p>
+            Snowflake + dbt + Airflow lakehouse tracking revenue leakage and margins across channels.
+            Causal-inference models isolate bottlenecks and quantify recoverable revenue; a Streamlit portal
+            with a <strong>LangGraph agent</strong> explains anomalies and outputs ROI-ranked action plans.
+          </p>
+          <div class="tags">
+            <span>Snowflake</span><span>dbt</span><span>Airflow</span><span>LangGraph</span><span>Causal ML</span><span>Streamlit</span>
+          </div>
+        </article>
+
+        <article class="proj reveal tilt" data-accent="green">
+          <div class="proj__glow"></div>
+          <header class="proj__head">
+            <span class="proj__icon">🧠</span>
+            <span class="proj__kind">research · IEEE</span>
+          </header>
+          <h3>Early Alzheimer's Detection</h3>
+          <p>
+            Random-forest classifier for early-stage Alzheimer's detection from clinical and imaging features.
+            Published and presented at <strong>IEEE IConSCEPT 2023</strong>.
+          </p>
+          <div class="tags">
+            <span>Python</span><span>scikit-learn</span><span>Random Forest</span><span>Healthcare ML</span>
+          </div>
+          <a class="proj__link" href="https://ieeexplore.ieee.org/document/10170234" target="_blank" rel="noopener">Read the paper ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section class="section" id="skills">
+      <h2 class="section__title reveal"><span class="section__num">04</span> skills<span class="section__cursor">_</span></h2>
+
+      <div class="skills">
+        <article class="skill reveal glow-cyan">
+          <h3><span class="skill__code">01</span> LLMs &amp; Agents</h3>
+          <div class="chips">
+            <span>LangGraph</span><span>LangChain</span><span>RAG Architecture</span><span>Hybrid Vector Search</span>
+            <span>Pinecone</span><span>Redis</span><span>MCP</span><span>LLM Evaluation &amp; Guardrails</span>
+            <span>Prompt Engineering</span><span>Hugging Face Transformers</span>
+          </div>
+        </article>
+        <article class="skill reveal glow-magenta">
+          <h3><span class="skill__code">02</span> Machine Learning</h3>
+          <div class="chips">
+            <span>PyTorch</span><span>Transformers</span><span>Fine-tuning</span><span>Quantile Regression</span>
+            <span>KNN</span><span>Causal Inference</span><span>Random Forest</span><span>Vision Models</span><span>Deep Learning</span>
+          </div>
+        </article>
+        <article class="skill reveal glow-green">
+          <h3><span class="skill__code">03</span> Data</h3>
+          <div class="chips">
+            <span>Python</span><span>SQL</span><span>PySpark</span><span>Kafka</span><span>Flink</span>
+            <span>Snowflake</span><span>dbt</span><span>Airflow</span><span>PostgreSQL</span>
+          </div>
+        </article>
+        <article class="skill reveal glow-cyan">
+          <h3><span class="skill__code">04</span> Platform &amp; MLOps</h3>
+          <div class="chips">
+            <span>FastAPI</span><span>React</span><span>KServe</span><span>MLflow</span><span>Docker</span>
+            <span>Kubernetes</span><span>Terraform</span><span>Prometheus</span><span>Grafana</span>
+            <span>AWS (EC2, S3, EMR)</span><span>GCP</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== EDUCATION ===== -->
+    <section class="section" id="education">
+      <h2 class="section__title reveal"><span class="section__num">05</span> education<span class="section__cursor">_</span></h2>
+
+      <div class="edu">
+        <article class="edu__card reveal glow-cyan">
+          <span class="edu__date">Aug 2025 — May 2027</span>
+          <h3>MS, Data Science</h3>
+          <p class="edu__school">San José State University · San José, CA</p>
+          <p class="edu__meta">CGPA 3.60 / 4 · Deep Learning, Generative AI, Distributed Systems, Machine Learning</p>
+        </article>
+        <article class="edu__card reveal glow-magenta">
+          <span class="edu__date">2018 — 2022</span>
+          <h3>BE, Electronics &amp; Communication Engineering</h3>
+          <p class="edu__school">Shri Ramdeobaba College of Engineering and Management · India</p>
+          <p class="edu__meta">CGPA 8.43 / 10 · OOP, Data Structures, DBMS, Computer Networks, Microcontrollers</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section section--contact" id="contact">
+      <div class="contact reveal">
+        <p class="contact__eyebrow">// what's next</p>
+        <h2 class="contact__title">Let's build something<br /><span class="neon-text">intelligent.</span></h2>
+        <p class="contact__text">
+          I'm looking for full-time AI Engineer / ML Engineer roles. If you're building with LLMs,
+          agents or RAG and want someone who ships to production — my inbox is open.
+        </p>
+        <div class="contact__actions">
+          <a href="mailto:anushkak1202@gmail.com" class="btn btn--primary">anushkak1202@gmail.com</a>
+          <a href="https://linkedin.com/in/anushka-khadatkar" target="_blank" rel="noopener" class="btn btn--ghost">LinkedIn ↗</a>
+          <a href="https://github.com/AnushkaKhadatkar" target="_blank" rel="noopener" class="btn btn--ghost">GitHub ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p><span class="nav__prompt">$</span> echo "© <span id="year"></span> Anushka Khadatkar · built with HTML, CSS &amp; a little neon"</p>
+  </footer>
+
+  <script src="./assets/js/main.js" defer></script>
+</body>
 </html>
